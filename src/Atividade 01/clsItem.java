@@ -9,7 +9,8 @@ class Item {
         numeroItem = n_numeroItem;
         descricaoItem = n_descricaoItem;
         quantidadeComprada = n_quantidadeComprada;
-        precoItem = n_quantidadeComprada;
+        precoItem = n_precoItem;
+        ValidaClasse();
     }
     public int getNumeroItem()
     {
@@ -45,5 +46,15 @@ class Item {
     {
         precoItem = n_precoItem;
     }
-
+    private void ValidaClasse()
+    {
+        if(quantidadeComprada < 0)
+        {
+            quantidadeComprada = 0;
+        }
+        if(precoItem < 0.0)
+        {
+            precoItem = 0.0f;
+        }
+    }
 }
